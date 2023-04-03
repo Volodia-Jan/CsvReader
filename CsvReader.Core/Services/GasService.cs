@@ -18,6 +18,10 @@ public class GasService : IGasService
         while (!textParser.EndOfData)
         {
             var fields = textParser.ReadFields();
+            if (fields == null)
+                continue;
+            if (fields.Any(string.IsNullOrEmpty))
+                continue;
             
             gasList.Add(new Gas
             {
