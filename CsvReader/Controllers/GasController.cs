@@ -16,5 +16,5 @@ public class GasController : Controller
 
     [HttpGet]
     public IActionResult GetAllGas() =>
-        View("GasView", _gisService.UploadFromCsvFile("test_data.csv", ";"));
+        View("GasView", _gisService.UploadFromCsvFile("wwwroot/test_data.csv", ";"));
 }
